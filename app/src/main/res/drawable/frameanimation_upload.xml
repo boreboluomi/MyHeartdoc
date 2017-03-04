@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8"?>
+<animation-list xmlns:android="http://schemas.android.com/apk/res/android">
+    <item
+        android:drawable="@mipmap/ic_cloud_3"
+        android:duration="250" />
+    <item
+        android:drawable="@mipmap/ic_cloud_5"
+        android:duration="250" />
+    <item
+        android:drawable="@mipmap/ic_cloud_8"
+        android:duration="250" />
+</animation-list>

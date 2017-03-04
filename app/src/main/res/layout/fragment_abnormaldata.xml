@@ -1,0 +1,133 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#ffffff">
+
+    <RelativeLayout
+        android:id="@+id/rl_title"
+        android:layout_width="match_parent"
+        android:layout_height="40dp"
+        android:background="@drawable/top">
+
+        <ImageView
+            android:id="@+id/iv_back"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:paddingLeft="10dp"
+            android:paddingRight="10dp"
+            android:src="@mipmap/ic_back" />
+
+        <RelativeLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_toRightOf="@id/iv_back">
+
+            <TextView
+                android:id="@+id/tv_timeLabel"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="02/28 20:19:21"
+                android:textColor="#26bfa6"
+                android:textSize="14sp" />
+
+            <TextView
+                android:id="@+id/tv_timeLength"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/tv_timeLabel"
+                android:text="时长 00:00:47"
+                android:textColor="#26bfa6"
+                android:textSize="14sp" />
+        </RelativeLayout>
+
+        <TextView
+            android:id="@+id/tv_abNormalInfor"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentBottom="true"
+            android:layout_alignParentRight="true"
+            android:layout_marginBottom="5dp"
+            android:layout_marginRight="10dp"
+            android:text="疑似症状 窦性心动过速"
+            android:textColor="#666666"
+            android:textSize="14sp" />
+    </RelativeLayout>
+
+    <HorizontalScrollView
+        android:id="@+id/HSL"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/rl_title">
+
+        <com.electrocardio.custom.elec.SectionMeasureDataView
+            android:id="@+id/sectionDataDis"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content" />
+    </HorizontalScrollView>
+
+    <com.electrocardio.custom.elec.SectionDataRL
+        android:id="@+id/SDR"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/rl_title">
+
+        <com.electrocardio.custom.elec.HistoryMeasureBackground
+            android:id="@+id/HMB"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent" />
+
+        <com.electrocardio.custom.elec.GainStandardView
+            android:id="@+id/gainSV"
+            android:layout_width="30dp"
+            android:layout_height="match_parent" />
+
+        <TextView
+            android:id="@+id/tv_range"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="8dp"
+            android:layout_marginTop="5dp"
+            android:text="25mm/s 5mm/mv"
+            android:textColor="#000000"
+            android:textSize="13sp" />
+
+        <RelativeLayout
+            android:id="@+id/rl_gain"
+            android:layout_width="62dp"
+            android:layout_height="34dp"
+            android:layout_alignBottom="@id/HMB"
+            android:layout_alignParentRight="true"
+            android:layout_marginBottom="30dp"
+            android:layout_marginRight="10dp"
+            android:background="@drawable/gain"
+            android:gravity="center_horizontal">
+
+            <TextView
+                android:id="@+id/tv_gain"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:text="X0.5"
+                android:textColor="#ffffff"
+                android:textSize="13dp" />
+
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:layout_toRightOf="@id/tv_gain"
+                android:background="@mipmap/ic_stretch" />
+        </RelativeLayout>
+
+    </com.electrocardio.custom.elec.SectionDataRL>
+
+    <com.electrocardio.custom.elec.CustomProgressBarWithLabel
+        android:id="@+id/CPBWL"
+        android:layout_width="match_parent"
+        android:layout_height="60dp"
+        android:layout_alignParentBottom="true"
+        android:layout_below="@id/SDR" />
+
+</RelativeLayout>

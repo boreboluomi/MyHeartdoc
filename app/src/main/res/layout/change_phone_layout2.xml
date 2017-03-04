@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+
+    <RelativeLayout
+        android:id="@+id/title_state2"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@+id/title"
+
+        >
+        <include
+            layout="@layout/activity_retrieve_layout_finish" />
+
+
+
+    </RelativeLayout>
+
+
+    <RelativeLayout
+        android:id="@+id/contetn_state2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="150dp"
+
+        >
+        <include
+            layout="@layout/activity_phone_layout"
+            />
+
+
+    </RelativeLayout>
+
+   <!-- <RelativeLayout
+        android:id="@+id/activity_finish"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:gravity="center"
+        android:visibility="gone"
+        >
+        <include
+            layout="@layout/activity_retrieve_finish"
+            />
+
+
+    </RelativeLayout>-->
+
+</RelativeLayout>

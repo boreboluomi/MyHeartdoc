@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/imageselector_title_bar_layout"
+    android:layout_width="match_parent"
+    android:layout_height="50dp"
+    android:background="@drawable/top"
+    android:gravity="center">
+
+    <LinearLayout
+        android:id="@+id/back"
+        android:layout_width="50dp"
+        android:layout_height="50dp"
+        android:gravity="center"
+       >
+        <!-- android:onClick="doClick"-->
+
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:contentDescription="@null"
+            android:src="@mipmap/ic_back" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:gravity="center">
+
+        <TextView
+            android:id="@+id/title_text"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:text="找回密码"
+            android:textColor="#26bfa6"
+            android:textSize="22sp" />
+    </LinearLayout>
+
+</RelativeLayout>

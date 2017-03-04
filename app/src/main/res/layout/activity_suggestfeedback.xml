@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#ebebf0">
+
+    <include
+        android:id="@+id/include"
+        layout="@layout/fragment_title" />
+
+    <EditText
+        android:id="@+id/et_suggest"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/include"
+        android:layout_centerHorizontal="true"
+        android:layout_marginLeft="10dp"
+        android:layout_marginRight="10dp"
+        android:layout_marginTop="10dp"
+        android:background="@drawable/textfield"
+        android:gravity="top"
+        android:hint="因为有您关注的目光，我们才得以不断前进。"
+        android:inputType="textMultiLine"
+        android:lines="15"
+        android:maxLength="300"
+        android:padding="5dp"
+        android:textColor="#333333"
+        android:textSize="16sp" />
+
+    <TextView
+        android:id="@+id/tv_curNumber"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignBottom="@id/et_suggest"
+        android:layout_alignRight="@id/et_suggest"
+        android:layout_marginBottom="5dp"
+        android:layout_marginRight="5dp"
+        android:text="0/300"
+        android:textColor="#b2b2b2"
+        android:textSize="14sp" />
+</RelativeLayout>

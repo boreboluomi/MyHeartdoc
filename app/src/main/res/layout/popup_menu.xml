@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+
+    >
+
+    <LinearLayout
+        android:id="@+id/popup_contianer"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:background="@drawable/bg_bubble"
+        >
+        <TextView
+            android:id="@+id/tx_1"
+            android:layout_width="160dp"
+            android:layout_height="60dp"
+            android:gravity="center"
+            android:textSize="14sp"
+            android:textColor="@color/comment_popup_tx_bg"
+            android:text="点击断开连接"
+            />
+
+    </LinearLayout>
+
+</RelativeLayout>

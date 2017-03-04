@@ -1,0 +1,185 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:slideswitch="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#ebebf0">
+
+    <include
+        android:id="@+id/title"
+        layout="@layout/fragment_title" />
+
+    <RelativeLayout
+        android:id="@+id/rl_device"
+        android:layout_width="match_parent"
+        android:layout_height="56dp"
+        android:layout_below="@id/title"
+        android:layout_marginTop="10dp"
+        android:background="#ffffff">
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="2px"
+            android:background="@color/registerpage_divider" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="10dp"
+            android:text="关联设备"
+            android:textColor="#333333"
+            android:textSize="18sp" />
+
+        <TextView
+            android:id="@+id/deviceLabel"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            android:layout_marginRight="10dp"
+            android:text="ECG2083749492"
+            android:textColor="#b2b2b2"
+            android:textSize="14sp" />
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="2px"
+            android:layout_alignParentBottom="true"
+            android:background="@color/registerpage_divider" />
+
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:id="@+id/rl_ring"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/rl_device"
+        android:layout_marginTop="10dp"
+        android:background="#ffffff">
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="2px"
+            android:background="@color/registerpage_divider" />
+
+        <RelativeLayout
+            android:id="@+id/rl_alert"
+            android:layout_width="match_parent"
+            android:layout_height="56dp">
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:layout_marginLeft="10dp"
+                android:gravity="center_vertical"
+                android:orientation="vertical">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="提示音量"
+                    android:textColor="#333333"
+                    android:textSize="18sp" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="当设备出现异常时的声音提醒"
+                    android:textColor="#b2b2b2"
+                    android:textSize="14sp" />
+
+            </LinearLayout>
+
+            <com.electrocardio.custom.elec.SwitchButtonView
+                android:id="@+id/alertButton"
+                android:layout_width="56dp"
+                android:layout_height="26dp"
+                android:layout_alignParentRight="true"
+                android:layout_centerVertical="true"
+                android:layout_marginRight="14dp"
+                slideswitch:slideButtonBackground="@mipmap/switch_point"
+                slideswitch:switchState="false" />
+        </RelativeLayout>
+
+        <RadioGroup
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/rl_alert"
+            android:background="#ffffff"
+            android:orientation="vertical">
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="2px"
+                android:layout_marginLeft="10dp"
+                android:layout_marginRight="10dp"
+                android:background="@color/registerpage_divider" />
+
+
+            <RadioButton
+                android:id="@+id/rb_big"
+                android:layout_width="70dp"
+                android:layout_height="56dp"
+                android:layout_marginLeft="20dp"
+                android:button="@null"
+                android:drawableLeft="@drawable/volume_rb_bg"
+                android:drawablePadding="5dp"
+                android:text="大"
+                android:textColor="#666666"
+                android:textSize="18sp" />
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="2px"
+                android:layout_marginLeft="10dp"
+                android:layout_marginRight="10dp"
+                android:background="@color/registerpage_divider" />
+
+            <RadioButton
+                android:id="@+id/rb_middle"
+                android:layout_width="70dp"
+                android:layout_height="56dp"
+                android:layout_marginLeft="20dp"
+                android:button="@null"
+                android:checked="true"
+                android:drawableLeft="@drawable/volume_rb_bg"
+                android:drawablePadding="5dp"
+                android:text="中"
+                android:textColor="#666666"
+                android:textSize="18sp" />
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="2px"
+                android:layout_marginLeft="10dp"
+                android:layout_marginRight="10dp"
+                android:background="@color/registerpage_divider" />
+
+            <RadioButton
+                android:id="@+id/rb_small"
+                android:layout_width="70dp"
+                android:layout_height="56dp"
+                android:layout_marginLeft="20dp"
+                android:button="@null"
+                android:drawableLeft="@drawable/volume_rb_bg"
+                android:drawablePadding="5dp"
+                android:text="小"
+                android:textColor="#666666"
+                android:textSize="18sp" />
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="2px"
+                android:background="@color/registerpage_divider" />
+        </RadioGroup>
+
+    </RelativeLayout>
+
+    <TextView
+        android:id="@+id/hideView"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@id/rl_ring" />
+
+</RelativeLayout>

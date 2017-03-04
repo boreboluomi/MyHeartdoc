@@ -1,0 +1,102 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="78dp">
+
+        <View
+            android:layout_width="1dp"
+            android:layout_height="match_parent"
+            android:layout_marginLeft="33dp"
+            android:background="#b2b2b2" />
+
+        <RelativeLayout
+            android:id="@+id/rl_timeSpace"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <com.electrocardio.custom.elec.PointView
+                android:id="@+id/iv_point"
+                android:layout_width="11dp"
+                android:layout_height="11dp"
+                android:layout_centerVertical="true"
+                android:layout_marginLeft="28dp"
+                android:background="@mipmap/ic_point_blue" />
+
+            <TextView
+                android:id="@+id/tv_timeSpace"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="5dp"
+                android:layout_toRightOf="@id/iv_point"
+                android:text="18:20:32~18:21:31"
+                android:textColor="#b3b3b3"
+                android:textSize="14sp" />
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/rl_timeSpace"
+            android:layout_marginLeft="44dp"
+            android:layout_marginTop="5dp">
+
+            <LinearLayout
+                android:id="@+id/ll_averageRate"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="平均心率 "
+                    android:textColor="#808080"
+                    android:textSize="16sp" />
+
+                <TextView
+                    android:id="@+id/tv_bpm"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="5dp"
+                    android:text="145 bpm"
+                    android:textColor="#333333"
+                    android:textSize="16sp" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/ll_averageRate"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="健康状况 "
+                    android:textColor="#808080"
+                    android:textSize="16sp" />
+
+                <TextView
+                    android:id="@+id/tv_health"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="5dp"
+                    android:text="亚健康"
+                    android:textColor="#333333"
+                    android:textSize="16sp" />
+            </LinearLayout>
+        </RelativeLayout>
+
+        <com.electrocardio.custom.elec.SixSecondRecordLabel
+            android:id="@+id/ssrl_label"
+            android:layout_width="62dp"
+            android:layout_height="62dp"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            android:layout_marginRight="10dp" />
+    </RelativeLayout>
+
+</RelativeLayout>

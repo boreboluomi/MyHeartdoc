@@ -1,0 +1,196 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="com.electrocardio">
+
+    <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.GET_TASKS" />
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
+
+    <!--蓝牙-->
+    <uses-permission android:name="android.permission.BLUETOOTH" />
+    <uses-permission android:name="android.permission.BLUETOOTH_ADMIN" />
+    <uses-permission android:name="android.permission.MOUNT_UNMOUNT_FILESYSTEMS" />
+    <uses-permission android:name="android.permission.INTERACT_ACROSS_USERS_FULL" />
+    <uses-permission android:name="android.permission.WAKE_LOCK" />
+
+    <!--第三方-->
+    <uses-permission android:name="android.permission.READ_CONTACTS" />
+    <uses-permission android:name="android.permission.READ_PHONE_STATE" />
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
+    <uses-permission android:name="android.permission.ACCESS_WIFI_STATE" />
+    <uses-permission android:name="android.permission.RECEIVE_SMS" />
+    <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION" />
+
+    <uses-permission android:name="android.permission.READ_SMS" />
+
+
+    <!-- 写文件的权限 -->
+    <uses-permission android:name="android.permission.WRITE_SETTINGS" />
+    <!-- 存储卡的权限 -->
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
+    <application
+        android:name=".base.BaseApplication"
+        android:allowBackup="true"
+        android:icon="@mipmap/icon"
+        android:label="@string/app_name"
+        android:largeHeap="true"
+        android:theme="@style/AppThemeNotTitle">
+        <activity
+            android:name=".start.SplashActivity"
+            android:label="@string/app_name"
+            android:screenOrientation="portrait"
+            android:theme="@style/AppThemeNotTitle">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+        <activity
+            android:name=".TestActivity"
+            android:screenOrientation="portrait" />
+
+        <activity
+            android:name=".start.StartGuideActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/AppThemeNotTitle" />
+        <activity
+            android:name=".activity.LoginRegisterActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/AppTheme"
+            />
+
+        <activity
+            android:name=".activity.RegisterActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/AppThemeNotTitle" />
+        <activity
+
+
+            android:name=".activity.HomeActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/AppThemeNotTitle" />
+
+        <activity
+            android:name=".activity.MeasureActivity"
+            android:configChanges="screenSize|keyboardHidden|orientation"
+            android:screenOrientation="portrait"
+            android:theme="@style/AppThemeNotTitle" />
+
+        <activity
+            android:name=".activity.RowMeasureActivity"
+            android:configChanges="screenSize|keyboardHidden|orientation"
+            android:screenOrientation="landscape"
+            android:theme="@style/AppThemeNotTitle" />
+
+        <activity
+            android:name=".activity.ScanActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/AppTheme" />
+        <activity
+            android:name=".activity.BluetoothScanActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/AppTheme" />
+        <activity
+            android:name=".activity.DistoryContentActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/AppTheme" />
+
+        <activity
+            android:name=".activity.DeviceManagerActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/AppThemeNotTitle" />
+        <activity
+            android:name=".activity.ClearDataActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/AppThemeNotTitle" />
+        <activity
+            android:name=".activity.PersonInformationActivity"
+            android:theme="@style/AppThemeNotTitle" />
+        <activity
+            android:name=".activity.PersonInformationEditActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/AppThemeNotTitle" />
+        <activity
+            android:name=".activity.AboutUsActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/AppThemeNotTitle" />
+        <activity
+            android:name=".activity.SuggestFeedBackActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/AppThemeNotTitle" />
+        <activity
+            android:name=".activity.UploadDataActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/AppThemeNotTitle" />
+        <activity
+            android:name=".activity.MessageInformActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/AppThemeNotTitle" />
+        <activity
+            android:name=".activity.AccountSecureActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/AppThemeNotTitle" />
+        <activity
+            android:name=".activity.ContinueMeasureRasultActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/AppThemeNotTitle" />
+        <activity
+            android:name=".activity.SixtySecondsMeaReaultActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/AppThemeNotTitle" />
+        <activity
+            android:name=".activity.AbnormalDataActivity"
+            android:screenOrientation="landscape"
+            android:theme="@style/AppThemeNotTitle" />
+        <activity
+            android:name=".activity.DataExceptionActivity"
+            android:screenOrientation="landscape"
+            android:theme="@style/AppThemeNotTitle" />
+        <activity
+            android:name=".activity.UploadFileActivity"
+            android:theme="@style/AppThemeNotTitle" />
+        <activity
+            android:name=".activity.UserInformationActivity"
+            android:theme="@style/AppThemeNotTitle" />
+        <activity
+            android:name=".clipimage.ClipImageActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/AppThemeNotTitle" />
+
+        <activity
+            android:name=".imageselector.ImageSelectorActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/AppThemeNotTitle" />
+
+        <activity
+            android:name=".imageselector.ImagEntryActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/AppThemeNotTitle" />
+
+        <activity
+            android:name=".activity.RetrievepasswordActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/AppThemeNotTitle" />
+        <activity
+            android:name=".activity.ChangePasswordsActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/AppThemeNotTitle"
+
+            />
+        <activity
+            android:name=".activity.ChangephoneActivity1"
+            android:screenOrientation="portrait"
+            android:theme="@style/AppThemeNotTitle" />
+
+    </application>
+
+
+    <supports-screens
+        android:anyDensity="true"
+        android:largeScreens="true"
+        android:normalScreens="true"
+        android:resizeable="true"
+        android:smallScreens="true" />
+
+</manifest>

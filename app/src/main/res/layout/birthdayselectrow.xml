@@ -1,0 +1,122 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:heartdoc="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/pop_layout"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="#ffffffff"
+    android:orientation="vertical">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+
+            <com.electrocardio.custom.elec.PapersPicker
+                android:id="@+id/year_paperspicker"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:layout_weight="1"
+                android:gravity="center"
+                heartdoc:itemNumber="3"
+                heartdoc:lineColor="#b3b3b3"
+                heartdoc:maskHight="45dp"
+                heartdoc:noEmpty="true"
+                heartdoc:normalTextColor="#999999"
+                heartdoc:normalTextSize="16sp"
+                heartdoc:selecredTextColor="#333333"
+                heartdoc:selecredTextSize="20sp"
+                heartdoc:unitHight="45dp" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_vertical"
+                android:text="年"
+                android:textColor="#333333"
+                android:textSize="20sp" />
+
+            <com.electrocardio.custom.elec.PapersPicker
+                android:id="@+id/month_paperspicker"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:layout_weight="1"
+                android:gravity="center"
+                heartdoc:itemNumber="3"
+                heartdoc:lineColor="#b3b3b3"
+                heartdoc:maskHight="45dp"
+                heartdoc:noEmpty="true"
+                heartdoc:normalTextColor="#999999"
+                heartdoc:normalTextSize="16sp"
+                heartdoc:selecredTextColor="#333333"
+                heartdoc:selecredTextSize="20sp"
+                heartdoc:unitHight="45dp" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_vertical"
+                android:text="月"
+                android:textColor="#333333"
+                android:textSize="20sp" />
+
+            <com.electrocardio.custom.elec.PapersPicker
+                android:id="@+id/day_paperspicker"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:layout_weight="1"
+                android:gravity="center"
+                heartdoc:itemNumber="3"
+                heartdoc:lineColor="#b3b3b3"
+                heartdoc:maskHight="45dp"
+                heartdoc:noEmpty="true"
+                heartdoc:normalTextColor="#999999"
+                heartdoc:normalTextSize="16sp"
+                heartdoc:selecredTextColor="#333333"
+                heartdoc:selecredTextSize="20sp"
+                heartdoc:unitHight="45dp" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_vertical"
+                android:layout_marginRight="5dp"
+                android:text="日"
+                android:textColor="#333333"
+                android:textSize="20sp" />
+        </LinearLayout>
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="1px"
+            android:layout_marginLeft="10dp"
+            android:layout_marginRight="10dp"
+            android:background="@color/registerpage_divider" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:gravity="center">
+
+        <TextView
+            android:id="@+id/tv_sure"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:gravity="center"
+            android:text="确定"
+            android:textColor="#333333"
+            android:textSize="16sp"
+            android:textStyle="bold" />
+    </LinearLayout>
+
+</LinearLayout>

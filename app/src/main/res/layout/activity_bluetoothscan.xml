@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/background_scan">
+
+
+    <RelativeLayout
+        android:id="@+id/custom_view"
+        android:layout_width="match_parent"
+        android:layout_height="340dp">
+
+        <com.electrocardio.custom.elec.RippleViewTotal
+            android:id="@+id/rvt"
+            android:layout_width="340dp"
+            android:layout_height="match_parent"
+            android:layout_centerHorizontal="true" />
+
+        <ImageView
+            android:id="@+id/mScan_cancel"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:padding="20dp"
+            android:src="@mipmap/ic_close" />
+    </RelativeLayout>
+
+    <TextView
+        android:id="@+id/mText"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:layout_below="@+id/custom_view"
+        android:gravity="bottom"
+        android:paddingBottom="5dp"
+        android:paddingLeft="10dp"
+        android:text="选择设备"
+        android:textColor="#999999"
+        android:textSize="21sp" />
+
+    <ListView
+        android:id="@+id/peripheralsListView"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/mText" />
+
+</RelativeLayout>

@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+                xmlns:hint="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+
+    >
+    <RelativeLayout
+        android:id="@+id/mhrartwaves_title"
+        android:layout_width="match_parent"
+        android:layout_height="200dp"
+
+        >
+    <com.electrocardio.custom.elec.ScrollHorizontalView
+        android:id="@+id/root"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_vertical"
+        android:scrollbars="none"
+        >
+        <LinearLayout
+            android:id="@+id/id_gallery"
+            android:layout_width="30dp"
+            android:layout_height="240dp"
+            android:orientation="horizontal" >
+        </LinearLayout>
+    </com.electrocardio.custom.elec.ScrollHorizontalView>
+
+        </RelativeLayout>
+    <com.electrocardio.custom.elec.SeekBarHint
+        android:id="@+id/exce_seekbar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/mhrartwaves_title"
+        android:max="12100"
+        android:layout_marginTop="40dp"
+        hint:popupWidth="100dp"
+        hint:yOffset="-200dp"
+        hint:popupStyle="follow"
+
+        />
+</RelativeLayout>

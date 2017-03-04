@@ -1,0 +1,471 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#dee4e6"
+    android:orientation="vertical">
+
+    <LinearLayout
+        android:id="@+id/layout_top"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+
+        <FrameLayout
+            android:layout_width="fill_parent"
+            android:layout_height="48dp"
+            android:background="#26bfa6">
+
+            <com.electrocardio.custom.elec.CircleImageView
+                android:id="@+id/title_bar_left_menu"
+                android:layout_width="38dp"
+                android:layout_height="38dp"
+                android:layout_gravity="left|center_vertical"
+                android:layout_marginLeft="10dp"
+                android:src="@mipmap/person" />
+
+            <ImageView
+                android:id="@+id/title_bar_right_menu"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:layout_gravity="right"
+                android:paddingLeft="20dp"
+                android:paddingRight="10dp"
+                android:src="@mipmap/ic_history" />
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="0.5dp"
+                android:layout_gravity="bottom"
+                android:layout_marginLeft="10dp"
+                android:layout_marginRight="10dp"
+                android:background="#7dd9ca" />
+        </FrameLayout>
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="48dp"
+            android:background="#26bfa6">
+
+            <TextView
+                android:id="@+id/ClearAllButtonPressed"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:layout_marginLeft="10dp"
+                android:text="无连接设备"
+                android:textColor="#ffffff"
+                android:textSize="18sp" />
+
+            <ImageView
+                android:id="@+id/ClearImageView"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:layout_marginLeft="5dp"
+                android:layout_toRightOf="@id/ClearAllButtonPressed"
+                android:background="@mipmap/triangle"
+                android:visibility="gone" />
+
+            <TextView
+                android:id="@+id/tv_lostPackageRate"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:layout_marginLeft="10dp"
+                android:layout_toRightOf="@id/ClearImageView"
+                android:text="丢包率："
+                android:textColor="#ffffff"
+                android:textSize="14sp"
+                android:visibility="invisible" />
+
+            <TextView
+                android:id="@+id/btn_Correct"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentRight="true"
+                android:layout_centerVertical="true"
+                android:layout_marginRight="10dp"
+                android:background="@drawable/btn_selector"
+                android:padding="8dp"
+                android:text="1mv校准"
+                android:textColor="#ffffff"
+                android:textSize="16sp"
+                android:visibility="invisible" />
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="#26bfa6">
+
+            <RelativeLayout
+                android:id="@+id/Ecg_button"
+                android:layout_width="match_parent"
+                android:layout_height="210dp"
+                android:layout_marginLeft="5dp"
+                android:layout_marginRight="5dp"
+                android:layout_marginTop="5dp"
+                android:background="@drawable/electrocardiogram_bg">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="30dp"
+                    android:orientation="horizontal">
+
+                    <LinearLayout
+                        android:layout_width="0dp"
+                        android:layout_height="match_parent"
+                        android:layout_marginLeft="8dp"
+                        android:layout_weight="1"
+                        android:orientation="horizontal">
+
+                        <TextView
+                            android:id="@+id/Electricity_text"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center_vertical"
+                            android:text="- -%"
+                            android:textColor="#bad8d3"
+                            android:textSize="13sp" />
+
+                        <ImageView
+                            android:id="@+id/mElectricity"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center_vertical"
+                            android:layout_marginLeft="5dp"
+                            android:background="@mipmap/ic_battery_7" />
+
+                        <TextView
+                            android:id="@+id/tv_chargeState"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center_vertical"
+                            android:layout_marginLeft="5dp"
+                            android:text="正在充电"
+                            android:textColor="#bad8d3"
+                            android:textSize="13sp"
+                            android:visibility="invisible" />
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="0dp"
+                        android:layout_height="match_parent"
+                        android:layout_marginRight="10dp"
+                        android:layout_weight="1"
+                        android:gravity="right"
+                        android:orientation="horizontal">
+
+                        <ImageView
+                            android:id="@+id/checkbox_RA"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center_vertical"
+                            android:background="@mipmap/lights_ra_off" />
+
+                        <ImageView
+                            android:id="@+id/checkbox_RL"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center_vertical"
+                            android:layout_marginLeft="10dp"
+                            android:background="@mipmap/lights_la_off" />
+                    </LinearLayout>
+                </LinearLayout>
+
+                <RelativeLayout
+                    android:id="@+id/root"
+                    android:layout_width="match_parent"
+                    android:layout_height="180dp"
+                    android:layout_alignParentBottom="true">
+
+                    <com.electrocardio.custom.elec.MeasureBackground
+                        android:id="@+id/MB"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:background="#ffffff" />
+
+                    <TextView
+                        android:id="@+id/tv_range"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="8dp"
+                        android:layout_marginTop="5dp"
+                        android:text="25mm/s 10mm/mv"
+                        android:textColor="#000000"
+                        android:textSize="13sp" />
+
+                    <ImageView
+                        android:id="@+id/iv_full"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentBottom="true"
+                        android:padding="5dp"
+                        android:src="@mipmap/full" />
+
+                    <RelativeLayout
+                        android:id="@+id/rl_gain"
+                        android:layout_width="62dp"
+                        android:layout_height="34dp"
+                        android:layout_alignParentBottom="true"
+                        android:layout_alignParentRight="true"
+                        android:layout_marginBottom="10dp"
+                        android:layout_marginRight="10dp"
+                        android:background="@drawable/gain"
+                        android:gravity="center_horizontal">
+
+                        <TextView
+                            android:id="@+id/tv_gain"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_centerVertical="true"
+                            android:text="X0.5"
+                            android:textColor="#ffffff"
+                            android:textSize="13dp" />
+
+                        <ImageView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_centerVertical="true"
+                            android:layout_toRightOf="@id/tv_gain"
+                            android:background="@mipmap/ic_stretch" />
+                    </RelativeLayout>
+                </RelativeLayout>
+            </RelativeLayout>
+
+        </RelativeLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+
+            <RelativeLayout
+                android:layout_width="0dp"
+                android:layout_height="66dp"
+                android:layout_gravity="top"
+                android:layout_weight="1"
+                android:background="#26bfa6">
+
+                <TextView
+                    android:id="@+id/tv_respRate"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:layout_marginLeft="10dp"
+                    android:text="- -"
+                    android:textColor="#ffffff"
+                    android:textSize="42sp"
+                    android:textStyle="normal" />
+
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:layout_marginLeft="72dp"
+                    android:gravity="center_horizontal"
+                    android:orientation="vertical">
+
+                    <ImageView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:src="@mipmap/ic_respiration_white" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="BrPM"
+                        android:textColor="#ffffff"
+                        android:textSize="11sp" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="呼吸率"
+                        android:textColor="#ffffff"
+                        android:textSize="11sp" />
+                </LinearLayout>
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:background="@mipmap/yuan1"
+                android:gravity="center">
+
+                <com.electrocardio.custom.elec.MeasureButton
+                    android:id="@+id/measureBtn"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content" />
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:layout_width="0dp"
+                android:layout_height="66dp"
+                android:layout_weight="1"
+                android:background="#26bfa6">
+
+                <LinearLayout
+                    android:id="@+id/ll_heart"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentRight="true"
+                    android:layout_centerVertical="true"
+                    android:layout_marginRight="10dp"
+                    android:gravity="center_horizontal"
+                    android:orientation="vertical">
+
+                    <ImageView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:src="@mipmap/ic_heart_white" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="bpm"
+                        android:textColor="#ffffff"
+                        android:textSize="13sp" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="心率"
+                        android:textColor="#ffffff"
+                        android:textSize="11sp" />
+                </LinearLayout>
+
+                <TextView
+                    android:id="@+id/tv_heartRate"
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:layout_marginRight="10dp"
+                    android:layout_toLeftOf="@id/ll_heart"
+                    android:gravity="center_vertical"
+                    android:text="- -"
+                    android:textColor="#ffffff"
+                    android:textSize="42sp"
+                    android:textStyle="normal" />
+            </RelativeLayout>
+        </LinearLayout>
+    </LinearLayout>
+
+    <RelativeLayout
+        android:id="@+id/rl_measureTime"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/layout_top"
+        android:layout_marginTop="8dp"
+        android:visibility="invisible">
+
+        <TextView
+            android:id="@+id/tv_meaTimeLabel"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerHorizontal="true"
+            android:text="测量时长"
+            android:textColor="#666666"
+            android:textSize="13sp" />
+
+        <TextView
+            android:id="@+id/tv_meaTime"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/tv_meaTimeLabel"
+            android:layout_centerHorizontal="true"
+            android:text="00:28:35"
+            android:textColor="#666666"
+            android:textSize="26sp" />
+    </RelativeLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/rl_measureTime"
+        android:layout_marginTop="10dp"
+        android:orientation="vertical">
+
+        <RelativeLayout
+            android:id="@+id/rl_battery"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_horizontal"
+            android:visibility="invisible">
+
+            <ImageView
+                android:id="@+id/iv_power"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:src="@mipmap/ic_alert_power" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_toRightOf="@id/iv_power"
+                android:text="设备电量低，请充电后再使用。"
+                android:textColor="#c9151e"
+                android:textSize="13sp" />
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:id="@+id/rl_dataTrans"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_horizontal"
+            android:visibility="invisible">
+
+            <ImageView
+                android:id="@+id/iv_bluetooth"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:src="@mipmap/ic_alert_bluetooth" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_toRightOf="@id/iv_bluetooth"
+                android:text="数据传输有丢失，请调整测量环境。"
+                android:textColor="#c9151e"
+                android:textSize="13sp" />
+        </RelativeLayout>
+    </LinearLayout>
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_centerHorizontal="true"
+        android:layout_marginBottom="32dp"
+        android:text="Copyright ©2015 EDEN All Right Reserved"
+        android:textColor="#bfbfbf"
+        android:textSize="11sp" />
+
+
+    <FrameLayout
+        android:id="@+id/ProgressBar"
+        android:layout_width="match_parent"
+        android:layout_height="22dp"
+        android:layout_alignParentBottom="true"
+        android:layout_marginTop="10dp">
+
+        <ProgressBar
+            android:id="@+id/pbProgress"
+            style="?android:attr/progressBarStyleHorizontal"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="#d2d7d9"
+            android:progress="40"
+            android:progressDrawable="@drawable/progress_style" />
+
+        <TextView
+            android:id="@+id/tv_space"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:gravity="center"
+            android:text="已占用235.3M,剩余395.8M可用"
+            android:textColor="#ffffff"
+            android:textSize="13sp" />
+    </FrameLayout>
+</RelativeLayout>

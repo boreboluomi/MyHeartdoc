@@ -1,0 +1,53 @@
+<resources>
+
+    <style name="FullScreenTheme" parent="android:Theme.Black.NoTitleBar.Fullscreen" />
+    <!-- Base application theme. -->
+    <style name="AppTheme" parent="Theme.AppCompat.Light.DarkActionBar">
+        <!--  Customize your theme here. -->
+    </style>
+
+    <style name="AppThemeNotTitle" parent="AppBaseTheme">
+        <item name="android:windowNoTitle">true</item>
+        <item name="android:screenOrientation">portrait</item>
+        <item name="android:windowSoftInputMode">stateHidden</item>
+        <item name="@android:windowAnimationStyle">@style/translationstyle</item>
+        <!-- All customizations that are NOT specific to a particular API-level can go here. -->
+    </style>
+
+    <style name="AppBaseTheme" parent="Theme.AppCompat.Light.DarkActionBar"></style>
+
+    <style name="translationstyle">
+        <item name="@android:activityOpenEnterAnimation">@anim/default_fromright_in</item>
+        <item name="@android:activityOpenExitAnimation">@anim/default_toleft_out</item>
+        <item name="@android:activityCloseEnterAnimation">@anim/default_fromleft_in</item>
+        <item name="@android:activityCloseExitAnimation">@anim/default_toright_out</item>
+    </style>
+
+    <style name="line_style">
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">0.5dp</item>
+        <item name="android:background">@color/line_bg</item>
+        <item name="android:layout_margin">2dp</item>
+    </style>
+
+    <style name="AnimBottom" parent="@android:style/Animation">
+        <item name="android:windowEnterAnimation">@anim/push_bottom_in</item>
+        <item name="android:windowExitAnimation">@anim/push_bottom_out</item>
+    </style>
+
+    <style name="AppTheme.AppBarOverlay" parent="ThemeOverlay.AppCompat.Dark.ActionBar" />
+
+    <style name="AppTheme.PopupOverlay" parent="ThemeOverlay.AppCompat.Light" />
+
+    <style name="fade_animation">
+        <item name="@android:windowEnterAnimation">@anim/popup_show</item>
+        <item name="@android:windowExitAnimation">@anim/popup_hide</item>
+    </style>
+
+    <style name="RemindDialogStyle">
+        <item name="android:windowBackground">@color/reminddialog</item>
+        <item name="android:windowNoTitle">true</item>
+        <item name="android:windowAnimationStyle">@null</item>
+        <!-- 对话框是否有遮盖 -->
+    </style>
+</resources>

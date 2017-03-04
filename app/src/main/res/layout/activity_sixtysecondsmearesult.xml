@@ -1,0 +1,615 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:heartandbreath="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <RelativeLayout
+        android:id="@+id/rl_title"
+        android:layout_width="match_parent"
+        android:layout_height="45dp"
+        android:background="@drawable/top">
+
+        <ImageView
+            android:id="@+id/iv_back"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:paddingLeft="10dp"
+            android:paddingRight="5dp"
+            android:src="@mipmap/ic_back" />
+
+        <RelativeLayout
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_centerVertical="true"
+            android:layout_toRightOf="@id/iv_back">
+
+            <TextView
+                android:id="@+id/tv_timeSpace"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="20:18:32~20:19:31"
+                android:textColor="#26bfa6"
+                android:textSize="16sp" />
+
+            <TextView
+                android:id="@+id/tv_timeLength"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/tv_timeSpace"
+                android:text="时长 00:01:00"
+                android:textColor="#26bfa6"
+                android:textSize="16sp" />
+        </RelativeLayout>
+    </RelativeLayout>
+
+    <com.electrocardio.custom.elec.SectionDataHScrollView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/rl_title">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <RelativeLayout
+                android:id="@+id/rl_heartRate"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:background="#ffffff">
+
+                <RelativeLayout
+                    android:id="@+id/rl_heartRateTop"
+                    android:layout_width="match_parent"
+                    android:layout_height="50dp">
+
+                    <View
+                        android:id="@+id/view"
+                        android:layout_width="match_parent"
+                        android:layout_height="2px"
+                        android:background="#b2b2b2" />
+
+                    <ImageView
+                        android:id="@+id/iv_heartRate"
+                        android:layout_width="wrap_content"
+                        android:layout_height="match_parent"
+                        android:layout_alignParentRight="true"
+                        android:layout_centerVertical="true"
+                        android:paddingRight="10dp"
+                        android:src="@mipmap/ic_heart_color" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_centerVertical="true"
+                        android:layout_toLeftOf="@id/iv_heartRate"
+                        android:layout_toStartOf="@id/iv_heartRate"
+                        android:text="心率"
+                        android:textColor="#ed145b"
+                        android:textSize="20sp" />
+
+                    <View
+                        android:layout_width="match_parent"
+                        android:layout_height="2px"
+                        android:layout_alignParentBottom="true"
+                        android:layout_marginLeft="10dp"
+                        android:layout_marginRight="10dp"
+                        android:background="#b2b2b2" />
+                </RelativeLayout>
+
+                <LinearLayout
+                    android:id="@+id/ll_heartRateBottom"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@id/rl_heartRateTop"
+                    android:orientation="horizontal">
+
+                    <RelativeLayout
+                        android:layout_width="120dp"
+                        android:layout_height="wrap_content">
+
+                        <com.electrocardio.custom.elec.HeartAndBreathRingLabelView
+                            android:id="@+id/heartRingLabel"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_centerHorizontal="true"
+                            android:layout_marginTop="24dp"
+                            heartandbreath:isHeartRateLabel="true" />
+
+                        <com.electrocardio.custom.elec.HeartAndBreathRankLabelView
+                            android:id="@+id/heartFastRankLabel"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_below="@id/heartRingLabel"
+                            android:layout_marginLeft="12dp"
+                            android:layout_marginTop="13dp"
+                            heartandbreath:rankBorder="8dp"
+                            heartandbreath:rankColor="#d62002"
+                            heartandbreath:rankLabel="过快"
+                            heartandbreath:rankTextColor="#666666"
+                            heartandbreath:rankTextSize="13sp"
+                            heartandbreath:space="6dp" />
+
+                        <com.electrocardio.custom.elec.HeartAndBreathRankLabelView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_below="@id/heartRingLabel"
+                            android:layout_marginLeft="70dp"
+                            android:layout_marginTop="13dp"
+                            heartandbreath:rankBorder="8dp"
+                            heartandbreath:rankColor="#e58308"
+                            heartandbreath:rankLabel="稍快"
+                            heartandbreath:rankTextColor="#666666"
+                            heartandbreath:rankTextSize="13sp"
+                            heartandbreath:space="6dp" />
+
+                        <com.electrocardio.custom.elec.HeartAndBreathRankLabelView
+                            android:id="@+id/heartNormalRankLabel"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_below="@id/heartFastRankLabel"
+                            android:layout_marginLeft="12dp"
+                            android:layout_marginTop="4dp"
+                            heartandbreath:rankBorder="8dp"
+                            heartandbreath:rankColor="#6dbd18"
+                            heartandbreath:rankLabel="正常"
+                            heartandbreath:rankTextColor="#666666"
+                            heartandbreath:rankTextSize="13sp"
+                            heartandbreath:space="6dp" />
+
+                        <com.electrocardio.custom.elec.HeartAndBreathRankLabelView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_below="@id/heartFastRankLabel"
+                            android:layout_marginLeft="70dp"
+                            android:layout_marginTop="4dp"
+                            heartandbreath:rankBorder="8dp"
+                            heartandbreath:rankColor="#21d0c6"
+                            heartandbreath:rankLabel="稍慢"
+                            heartandbreath:rankTextColor="#666666"
+                            heartandbreath:rankTextSize="13sp"
+                            heartandbreath:space="6dp" />
+
+                        <com.electrocardio.custom.elec.HeartAndBreathRankLabelView
+                            android:id="@+id/heartSlowRankLabel"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_below="@id/heartNormalRankLabel"
+                            android:layout_marginBottom="12dp"
+                            android:layout_marginLeft="12dp"
+                            android:layout_marginTop="4dp"
+                            heartandbreath:rankBorder="8dp"
+                            heartandbreath:rankColor="#028bca"
+                            heartandbreath:rankLabel="过慢"
+                            heartandbreath:rankTextColor="#666666"
+                            heartandbreath:rankTextSize="13sp"
+                            heartandbreath:space="6dp" />
+                    </RelativeLayout>
+
+                    <View
+                        android:layout_width="2px"
+                        android:layout_height="match_parent"
+                        android:layout_marginBottom="12dp"
+                        android:layout_marginTop="20dp"
+                        android:background="#b2b2b2" />
+
+                    <RelativeLayout
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_marginBottom="15dp"
+                        android:layout_marginLeft="10dp"
+                        android:layout_marginTop="20dp"
+                        android:layout_weight="1">
+
+                        <RelativeLayout
+                            android:id="@+id/rl_averageRate"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content">
+
+                            <TextView
+                                android:id="@+id/tv_averageRateLabel"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_centerVertical="true"
+                                android:text="平均心率: "
+                                android:textColor="#666666"
+                                android:textSize="16sp" />
+
+                            <TextView
+                                android:id="@+id/tv_averageRate"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_toRightOf="@id/tv_averageRateLabel"
+                                android:text="70"
+                                android:textColor="#6dbd18"
+                                android:textSize="20sp" />
+
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_centerVertical="true"
+                                android:layout_toRightOf="@id/tv_averageRate"
+                                android:text=" 次/分"
+                                android:textColor="#6dbd18"
+                                android:textSize="13sp" />
+                        </RelativeLayout>
+
+                        <RelativeLayout
+                            android:id="@+id/rl_fastRate"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_below="@id/rl_averageRate">
+
+                            <TextView
+                                android:id="@+id/tv_fastRateLabel"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_centerVertical="true"
+                                android:text="最快心率: "
+                                android:textColor="#666666"
+                                android:textSize="16sp" />
+
+                            <TextView
+                                android:id="@+id/tv_fastRate"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_toRightOf="@id/tv_fastRateLabel"
+                                android:text="123"
+                                android:textColor="#d62002"
+                                android:textSize="20sp" />
+
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_centerVertical="true"
+                                android:layout_toRightOf="@id/tv_fastRate"
+                                android:text=" 次/分"
+                                android:textColor="#d62002"
+                                android:textSize="13sp" />
+                        </RelativeLayout>
+
+                        <RelativeLayout
+                            android:id="@+id/rl_slowestRate"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_below="@id/rl_fastRate">
+
+                            <TextView
+                                android:id="@+id/tv_slowestRateLabel"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_centerVertical="true"
+                                android:text="最慢心率: "
+                                android:textColor="#666666"
+                                android:textSize="16sp" />
+
+                            <TextView
+                                android:id="@+id/tv_slowestRate"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_toRightOf="@id/tv_slowestRateLabel"
+                                android:text="48"
+                                android:textColor="#21d0c6"
+                                android:textSize="20sp" />
+
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_centerVertical="true"
+                                android:layout_toRightOf="@id/tv_slowestRate"
+                                android:text=" 次/分"
+                                android:textColor="#21d0c6"
+                                android:textSize="13sp" />
+                        </RelativeLayout>
+                    </RelativeLayout>
+                </LinearLayout>
+
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="2px"
+                    android:layout_below="@+id/ll_heartRateBottom"
+                    android:background="#b2b2b2" />
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:id="@+id/rl_breathRate"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/rl_heartRate"
+                android:layout_marginTop="24dp"
+                android:background="#ffffff">
+
+                <RelativeLayout
+                    android:id="@+id/rl_breathReteTop"
+                    android:layout_width="match_parent"
+                    android:layout_height="50dp">
+
+                    <View
+                        android:layout_width="match_parent"
+                        android:layout_height="2px"
+                        android:background="#b2b2b2" />
+
+                    <ImageView
+                        android:id="@+id/iv_breathBeat"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentRight="true"
+                        android:layout_centerVertical="true"
+                        android:layout_marginRight="10dp"
+                        android:src="@mipmap/ic_respiration_color" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_centerVertical="true"
+                        android:layout_toLeftOf="@id/iv_breathBeat"
+                        android:layout_toStartOf="@id/iv_breathBeat"
+                        android:text="呼吸率"
+                        android:textColor="#009aff"
+                        android:textSize="20sp" />
+
+                    <View
+                        android:layout_width="match_parent"
+                        android:layout_height="2px"
+                        android:layout_alignParentBottom="true"
+                        android:layout_marginLeft="10dp"
+                        android:layout_marginRight="10dp"
+                        android:background="#b2b2b2" />
+                </RelativeLayout>
+
+                <LinearLayout
+                    android:id="@+id/ll_breathBeatBottom"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@id/rl_breathReteTop"
+                    android:orientation="horizontal">
+
+                    <RelativeLayout
+                        android:layout_width="120dp"
+                        android:layout_height="wrap_content">
+
+                        <com.electrocardio.custom.elec.HeartAndBreathRingLabelView
+                            android:id="@+id/breathRingLabel"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_centerHorizontal="true"
+                            android:layout_marginTop="24dp"
+                            heartandbreath:isHeartRateLabel="false" />
+
+                        <com.electrocardio.custom.elec.HeartAndBreathRankLabelView
+                            android:id="@+id/breathRankNormalLabel"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_below="@id/breathRingLabel"
+                            android:layout_marginLeft="12dp"
+                            android:layout_marginTop="13dp"
+                            heartandbreath:rankBorder="8dp"
+                            heartandbreath:rankColor="#6dbd18"
+                            heartandbreath:rankLabel="正常"
+                            heartandbreath:rankTextColor="#666666"
+                            heartandbreath:rankTextSize="13sp"
+                            heartandbreath:space="6dp" />
+
+                        <com.electrocardio.custom.elec.HeartAndBreathRankLabelView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_below="@id/breathRingLabel"
+                            android:layout_marginLeft="70dp"
+                            android:layout_marginTop="13dp"
+                            heartandbreath:rankBorder="8dp"
+                            heartandbreath:rankColor="#d62002"
+                            heartandbreath:rankLabel="过慢"
+                            heartandbreath:rankTextColor="#666666"
+                            heartandbreath:rankTextSize="13sp"
+                            heartandbreath:space="6dp" />
+
+                        <com.electrocardio.custom.elec.HeartAndBreathRankLabelView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_below="@id/breathRankNormalLabel"
+                            android:layout_marginBottom="12dp"
+                            android:layout_marginLeft="12dp"
+                            android:layout_marginTop="4dp"
+                            heartandbreath:rankBorder="8dp"
+                            heartandbreath:rankColor="#e58308"
+                            heartandbreath:rankLabel="过快"
+                            heartandbreath:rankTextColor="#666666"
+                            heartandbreath:rankTextSize="13sp"
+                            heartandbreath:space="6dp" />
+                    </RelativeLayout>
+
+                    <View
+                        android:layout_width="2px"
+                        android:layout_height="match_parent"
+                        android:layout_marginBottom="12dp"
+                        android:layout_marginTop="20dp"
+                        android:background="#b2b2b2" />
+
+                    <RelativeLayout
+                        android:layout_width="0dp"
+                        android:layout_height="match_parent"
+                        android:layout_marginLeft="10dp"
+                        android:layout_marginTop="20dp"
+                        android:layout_weight="1">
+
+                        <RelativeLayout
+                            android:id="@+id/rl_averageHeartBeat"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content">
+
+                            <TextView
+                                android:id="@+id/tv_averageHeartBeatLabel"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_centerVertical="true"
+                                android:text="平均呼吸率: "
+                                android:textColor="#666666"
+                                android:textSize="16sp" />
+
+                            <TextView
+                                android:id="@+id/tv_averageHeartBeat"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_toRightOf="@id/tv_averageHeartBeatLabel"
+                                android:text="12"
+                                android:textColor="#e58308"
+                                android:textSize="20sp" />
+
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_centerVertical="true"
+                                android:layout_toRightOf="@id/tv_averageHeartBeat"
+                                android:text=" 次/分"
+                                android:textColor="#e58308"
+                                android:textSize="13sp" />
+                        </RelativeLayout>
+
+                        <ImageView
+                            android:id="@+id/iv_share"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_alignParentBottom="true"
+                            android:layout_alignParentRight="true"
+                            android:layout_marginRight="15dp"
+                            android:padding="12dp"
+                            android:src="@mipmap/ic_share" />
+                    </RelativeLayout>
+                </LinearLayout>
+
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="2px"
+                    android:layout_below="@id/ll_breathBeatBottom"
+                    android:background="#b2b2b2" />
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="520dp"
+                android:layout_below="@+id/rl_breathRate"
+                android:layout_marginTop="24dp"
+                android:background="#ffffff">
+
+                <RelativeLayout
+                    android:id="@+id/ecg_relative"
+                    android:layout_width="match_parent"
+                    android:layout_height="50dp">
+
+                    <View
+                        android:layout_width="match_parent"
+                        android:layout_height="2px"
+                        android:background="#b2b2b2" />
+
+                    <ImageView
+                        android:id="@+id/ecg_image"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentRight="true"
+                        android:layout_centerVertical="true"
+                        android:layout_marginRight="5dp"
+                        android:src="@mipmap/ic_ecg_color" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_centerVertical="true"
+                        android:layout_toLeftOf="@+id/ecg_image"
+                        android:text="心电波"
+                        android:textColor="#26bfa6"
+                        android:textSize="20sp" />
+
+                    <View
+                        android:layout_width="match_parent"
+                        android:layout_height="2px"
+                        android:layout_alignParentBottom="true"
+                        android:layout_marginLeft="10dp"
+                        android:layout_marginRight="10dp"
+                        android:background="#b2b2b2" />
+
+                </RelativeLayout>
+
+                <HorizontalScrollView
+                    android:id="@+id/HSL"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@id/ecg_relative">
+
+                    <com.electrocardio.custom.elec.SectionMeasureDataView
+                        android:id="@+id/sectionDataDis"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        heartandbreath:bigNumber="12" />
+                </HorizontalScrollView>
+
+                <com.electrocardio.custom.elec.SectionDataRL
+                    android:id="@+id/SDR"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@id/ecg_relative"
+                    heartandbreath:bigNumber="12">
+
+                    <com.electrocardio.custom.elec.HistoryMeasureBackground
+                        android:id="@+id/HMB"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        heartandbreath:bigNumber="12" />
+
+                    <com.electrocardio.custom.elec.GainStandardView
+                        android:id="@+id/gainSV"
+                        android:layout_width="30dp"
+                        android:layout_height="match_parent"
+                        heartandbreath:bigNumber="12" />
+
+                    <TextView
+                        android:id="@+id/tv_range"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="8dp"
+                        android:layout_marginTop="5dp"
+                        android:text="25mm/s 5mm/mv"
+                        android:textColor="#000000"
+                        android:textSize="13sp" />
+
+                    <RelativeLayout
+                        android:id="@+id/rl_gain"
+                        android:layout_width="62dp"
+                        android:layout_height="34dp"
+                        android:layout_alignBottom="@id/HMB"
+                        android:layout_alignParentRight="true"
+                        android:layout_marginBottom="30dp"
+                        android:layout_marginRight="10dp"
+                        android:background="@drawable/gain"
+                        android:gravity="center_horizontal">
+
+                        <TextView
+                            android:id="@+id/tv_gain"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_centerVertical="true"
+                            android:text="X0.5"
+                            android:textColor="#ffffff"
+                            android:textSize="13dp" />
+
+                        <ImageView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_centerVertical="true"
+                            android:layout_toRightOf="@id/tv_gain"
+                            android:background="@mipmap/ic_stretch" />
+                    </RelativeLayout>
+                </com.electrocardio.custom.elec.SectionDataRL>
+
+                <com.electrocardio.custom.elec.CustomProgressBarWithLabel
+                    android:id="@+id/CPBWL"
+                    android:layout_width="match_parent"
+                    android:layout_height="60dp"
+                    android:layout_alignParentBottom="true"
+                    android:layout_below="@id/SDR" />
+
+            </RelativeLayout>
+        </RelativeLayout>
+    </com.electrocardio.custom.elec.SectionDataHScrollView>
+
+</RelativeLayout>

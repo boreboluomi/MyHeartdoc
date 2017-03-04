@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@android:color/transparent">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="54dp">
+
+        <TextView
+            android:id="@+id/tv_deviceName"
+            android:layout_width="wrap_content"
+            android:layout_height="27dp"
+            android:layout_marginLeft="10dp"
+            android:gravity="bottom"
+            android:text="AFD-ECG-837"
+            android:textColor="#ffffff"
+            android:textSize="18sp" />
+
+        <TextView
+            android:id="@+id/tv_deviceAddress"
+            android:layout_width="wrap_content"
+            android:layout_height="27dp"
+            android:layout_below="@id/tv_deviceName"
+            android:layout_marginLeft="10dp"
+            android:gravity="top"
+            android:text="E9:S0:78:17:X6:2A"
+            android:textColor="#ffffff"
+            android:textSize="14sp" />
+
+        <TextView
+            android:id="@+id/tv_connecting"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            android:layout_marginRight="5dp"
+            android:text="连接中..."
+            android:textColor="#ffffff"
+            android:textSize="16sp"
+            android:visibility="invisible" />
+    </RelativeLayout>
+
+</RelativeLayout>

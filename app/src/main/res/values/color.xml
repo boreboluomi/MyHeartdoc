@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="photo_mask">#88000000</color>
+    <color name="separation">#FFDCDCDC</color>
+    <color name="text_black">#FF333333</color>
+    <color name="text_gray">#FF999999</color>
+    <color name="dark_gray">#FF343535</color>
+    <color name="background">#181819</color>
+    <color name="maintheme_color">#1ebad1</color>
+    <color name="bottom_bar_color">#ffeeeeee</color>
+    <color name="red_color">#ffff0000</color>
+    <color name="history_title_button_color_pressed">#ff3498DB</color>
+    <color name="history_title_button_color_normal">#883498DB</color>
+    <color name="history_title_text_color_normal">#33666666</color>
+    <color name="gray">#ffbebebe</color>
+    <color name="registerpage_divider">#b2b2b2</color>
+    <color name="registerpage_button_textcolor">#1ebad1</color>
+    <color name="bloodpressure_normal">#2f9726</color>
+    <color name="bloodpressure_middle">#ff7200</color>
+    <color name="bloodpressure_higher">#c9151e</color>
+    <color name="myred">#c9151e</color>
+    <color name="mygreen">#2f9726</color>
+    <color name="myblue">#1ebad1</color>
+    <color name="myorange">#ff7200</color>
+    <color name="mybackground">#edf1f5</color>
+    <color name="radiogray">#808080</color>
+    <color name="reminddialog">#00000000</color>
+    <color name="reminddialogbluetext">#005aff</color>
+    <color name="textnochecked">#333333</color>
+    <color name="lefttitlecheck">#26bfa6</color>
+    <color name="lefttitlenocheck">#ffffffff</color>
+    <color name="black">#000000</color>
+    <color name="white">#ffffff</color>
+    <color name="leftmenutextcolor">#cccccc</color>
+    <color name="popup_bg">#8f000000</color>
+    <color name="line_bg">#CDCDCD</color>
+    <color name="mainthemecolor">#26bfa6</color>
+    <color name="comment_popup_bg">#292929</color>
+    <color name="comment_popup_tx_bg">#c7c7c7</color>
+    <color name="click_bg">#c7c7c7</color>
+    <color name="menu_bg">#2b2b2b</color>
+    <color name="menu_click_bg">#515151</color>
+
+    <color name="colorPrimary">#3F51B5</color>
+    <color name="colorPrimaryDark">#303F9F</color>
+    <color name="colorAccent">#FF4081</color>
+    <color name="elv_btn_pressed">#ff33b5e5</color>
+    <color name="elv_btn_focused">#ff0099cc</color>
+    <color name="elv_btn_normal">#00000000</color>
+
+    <color name="elv_popup_bg_color">#EE666666</color>
+    <color name="elv_separator_color">#BBBBBB</color>
+    <color name="elv_popup_text_color">#FFFFFF</color>
+</resources>

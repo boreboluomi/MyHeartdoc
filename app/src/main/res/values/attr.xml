@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <declare-styleable name="BigNumber">
+        <attr name="bigNumber" format="integer" />
+    </declare-styleable>
+    <declare-styleable name="CircleImageView">
+        <attr name="border_width" format="dimension" />
+        <attr name="border_color" format="color" />
+        <attr name="border_overlay" format="boolean" />
+    </declare-styleable>
+    <declare-styleable name="SwitchButtonView">
+        <attr name="slideButtonBackground" format="reference"></attr>
+        <attr name="switchState" format="boolean"></attr>
+    </declare-styleable>
+    <declare-styleable name="HeartAndBreathRateBgView">
+        <attr name="isHeartRate" format="boolean" />
+    </declare-styleable>
+    <declare-styleable name="HeartAndBreathRingLabelView">
+        <attr name="isHeartRateLabel" format="boolean" />
+    </declare-styleable>
+    <declare-styleable name="HeartAndBreathRankLabelView">
+        <attr name="rankColor" format="color" />
+        <attr name="rankLabel" format="string" />
+        <attr name="rankTextColor" format="color" />
+        <attr name="rankTextSize" format="dimension" />
+        <attr name="rankBorder" format="dimension" />
+        <attr name="space" format="dimension" />
+    </declare-styleable>
+    <declare-styleable name="HistorySlideCheckLayout">
+        <attr name="HSCL_UnitLabel" format="string" />
+        <attr name="curveLineColor" format="color" />
+    </declare-styleable>
+    <declare-styleable name="PapersPicker">
+        <attr name="normalTextColor" format="color" />
+        <attr name="normalTextSize" format="dimension" />
+        <attr name="selecredTextColor" format="color" />
+        <attr name="selecredTextSize" format="dimension" />
+        <attr name="unitHight" format="dimension" />
+        <attr name="itemNumber" format="integer" />
+        <attr name="lineColor" format="color" />
+        <attr name="maskHight" format="dimension" />
+        <attr name="noEmpty" format="boolean" />
+        <attr name="isEnable" format="boolean" />
+    </declare-styleable>
+
+</resources>

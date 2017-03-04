@@ -1,0 +1,473 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#dee4e6"
+   >
+
+    <LinearLayout
+        android:id="@+id/layout_top"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+
+        <FrameLayout
+            android:layout_width="fill_parent"
+            android:layout_height="48dp"
+            android:background="#26bfa6">
+
+            <com.electrocardio.custom.elec.CircleImageView
+                android:id="@+id/title_bar_left_menu"
+                android:layout_width="38dp"
+                android:layout_height="38dp"
+                android:layout_gravity="left|center_vertical"
+                android:layout_marginLeft="10dp"
+                android:src="@mipmap/person" />
+
+            <ImageView
+                android:id="@+id/title_bar_right_menu"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:layout_gravity="right"
+                android:paddingLeft="20dp"
+                android:paddingRight="10dp"
+                android:src="@mipmap/ic_history" />
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="0.5dp"
+                android:layout_gravity="bottom"
+                android:layout_marginLeft="10dp"
+                android:layout_marginRight="10dp"
+                android:background="#7dd9ca" />
+        </FrameLayout>
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="48dp"
+            android:background="#26bfa6"
+            android:gravity="center_vertical">
+
+            <TextView
+                android:id="@+id/ClearAllButtonPressed"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="10dp"
+                android:text="无连接设备"
+                android:textColor="#ffffff"
+                android:textSize="18sp" />
+
+            <ImageView
+                android:id="@+id/ClearImageView"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="5dp"
+                android:background="@mipmap/triangle"
+                android:visibility="gone" />
+
+            <RelativeLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginRight="10dp">
+
+                <CheckBox
+                    android:layout_width="80dp"
+                    android:layout_height="38dp"
+                    android:layout_alignParentRight="true"
+                    android:background="@drawable/btn_selector"
+                    android:button="@null"
+                    android:gravity="center"
+                    android:text="1 mv校准"
+                    android:textColor="#ffffff" />
+            </RelativeLayout>
+        </LinearLayout>
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="#26bfa6">
+
+            <RelativeLayout
+                android:id="@+id/Ecg_button"
+                android:layout_width="match_parent"
+                android:layout_height="210dp"
+                android:layout_marginTop="5dp"
+                android:background="@drawable/electrocardiogram_bg">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="30dp">
+
+                    <LinearLayout
+                        android:id="@+id/electricity_lin"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="8dp"
+                        android:layout_weight="1"
+                        android:gravity="center_vertical"
+                        android:visibility="gone"
+                        >
+
+                        <TextView
+                            android:id="@+id/Electricity_text"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="90%"
+                            android:textColor="#bad8d3"
+                            android:textSize="13sp" />
+
+                        <ImageView
+                            android:id="@+id/mElectricity"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginLeft="5dp"
+                            android:background="@mipmap/ic_battery_1" />
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_marginRight="10dp"
+                        android:layout_weight="1"
+                        android:gravity="right">
+
+                        <CheckBox
+                            android:id="@+id/checkbox_RA"
+                            android:layout_width="wrap_content"
+                            android:layout_height="13dp"
+                            android:background="@drawable/lights_ra"
+                            android:button="@null"
+                            android:checked="false"
+                            android:clickable="false" />
+
+                        <CheckBox
+                            android:id="@+id/checkbox_RL"
+                            android:layout_width="wrap_content"
+                            android:layout_height="13dp"
+                            android:layout_marginLeft="10dp"
+                            android:background="@drawable/lights_la"
+                            android:button="@null"
+                            android:clickable="false" />
+                    </LinearLayout>
+                </LinearLayout>
+
+                <RelativeLayout
+                    android:id="@+id/root"
+                    android:layout_width="match_parent"
+                    android:layout_height="180dp"
+                    android:background="#ffffff"
+                    android:layout_alignParentBottom="true">
+
+                </RelativeLayout>
+
+                <LinearLayout
+                    android:id="@+id/frequency"
+                    android:layout_width="62dp"
+                    android:layout_height="34dp"
+                    android:layout_alignParentBottom="true"
+                    android:layout_alignParentRight="true"
+                    android:layout_marginBottom="10dp"
+                    android:layout_marginRight="15dp"
+                    android:background="@drawable/gain"
+                    android:gravity="center_vertical">
+
+                    <TextView
+                        android:id="@+id/frequency_text"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="5dp"
+                        android:text="x 1.00"
+                        android:textColor="#ffffff"
+                        android:textSize="13dp" />
+
+                    <ImageView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:background="@mipmap/ic_stretch" />
+
+                </LinearLayout>
+            </RelativeLayout>
+
+        </RelativeLayout>
+
+        <LinearLayout
+            android:id="@+id/ecg_relayout"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <LinearLayout
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:background="#26bfa6"
+                android:gravity="center"
+                android:orientation="horizontal">
+
+
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="2"
+                    android:text="- -"
+                    android:gravity="center"
+                    android:textColor="#ffffff"
+                    android:textSize="30sp" />
+
+                <LinearLayout
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    android:layout_marginLeft="15dp"
+                    android:orientation="vertical">
+
+                    <ImageView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:background="@mipmap/ic_respiration_white" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="2dp"
+                        android:text="  BrPM"
+                        android:textColor="#ffffff"
+                        android:textSize="11sp" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="1dp"
+                        android:text=" 呼吸率"
+                        android:textColor="#ffffff"
+                        android:textSize="11sp" />
+                </LinearLayout>
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:gravity="center_horizontal">
+
+                <RelativeLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:background="@mipmap/yuan1"
+                    android:gravity="center">
+
+                    <Button
+                        android:id="@+id/scanButton"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:background="@drawable/button_press"
+                        android:gravity="center"
+                        android:onClick="onScanButtonPressed"
+                        android:text="搜索设备"
+                        android:textColor="#008fe9"
+                        android:textSize="18sp"
+
+                        />
+
+                    <CheckBox
+                        android:id="@+id/start_stop_button"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:background="@drawable/start_stop_button"
+                        android:button="@null"
+                        android:checked="false"
+                        android:visibility="gone" />
+                </RelativeLayout>
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:background="#26bfa6"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:id="@+id/heart_rate"
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="2"
+                    android:gravity="center"
+                    android:text="- -"
+                    android:textColor="#ffffff"
+                    android:textSize="30sp" />
+
+                <LinearLayout
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+
+                    android:orientation="vertical"
+
+                    >
+
+                    <ImageView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:background="@mipmap/ic_heart_white" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text=" bpm"
+                        android:textColor="#ffffff"
+                        android:textSize="13sp" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text=" 心率"
+                        android:textColor="#ffffff"
+                        android:textSize="11sp"
+
+                        />
+                </LinearLayout>
+            </LinearLayout>
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/test_duration"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:orientation="vertical"
+            android:visibility="invisible"
+
+            >
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="测试时长"
+                android:textColor="#666666"
+                android:textSize="13sp"
+                />
+            <Chronometer
+                android:id="@+id/down_timer"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textColor="#666666"
+                android:textSize="26sp"
+                />
+        </LinearLayout>
+    </LinearLayout>
+
+
+    <LinearLayout
+        android:id="@+id/alert_power"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_above="@+id/alert_bluetooth"
+        android:gravity="center"
+        android:visibility="invisible"
+        >
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:background="@mipmap/ic_alert_power"
+            />
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="设备电量低,请充电后使用"
+            android:textColor="#c9151e"
+            android:textSize="13sp"
+            />
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/alert_bluetooth"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_above="@+id/copyright"
+        android:layout_marginBottom="5dp"
+        android:gravity="center"
+        android:visibility="gone"
+        >
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:background="@mipmap/ic_alert_bluetooth"
+            />
+        <TextView
+            android:id="@+id/alert_bluetooth_text"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="数据蓝牙丢失,请调整测量环境"
+            android:textColor="#c9151e"
+            android:textSize="13sp"
+            android:visibility="gone"
+            />
+        <TextView
+            android:id="@+id/alert_bluetooth_rate"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="100%"
+            android:textColor="#c9151e"
+            android:textSize="18sp"
+            />
+    </LinearLayout>
+    <LinearLayout
+        android:id="@+id/copyright"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_above="@+id/ProgressBar"
+        android:gravity="center">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Copyright ©2015 EDEN All Right Reserved"
+            android:textColor="#fbfbfb"
+            android:textSize="11sp" />
+    </LinearLayout>
+
+
+    <LinearLayout
+        android:id="@+id/ProgressBar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true">
+
+        <ProgressBar
+            android:id="@+id/pbProgress"
+            style="?android:attr/progressBarStyleHorizontal"
+            android:layout_width="match_parent"
+            android:layout_height="22dp"
+            android:background="#d2d7d9"
+            android:progress="40"
+            android:progressDrawable="@drawable/progress_style" />
+        <!--注意这一行-->
+    </LinearLayout>
+
+    <RelativeLayout
+        android:id="@+id/homefragment_loading"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/popup_bg"
+        android:gravity="center"
+        android:visibility="gone"
+        >
+        <LinearLayout
+            android:layout_height="100dp"
+            android:layout_width="100dp"
+            android:gravity="center"
+            android:orientation="vertical"
+           >
+            <ProgressBar
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content" />
+            <TextView
+                android:text="加载中…"
+                android:textSize="11sp"
+                android:textColor="#888888"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content" />
+        </LinearLayout>
+
+
+    </RelativeLayout>
+</RelativeLayout>

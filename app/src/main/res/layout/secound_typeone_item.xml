@@ -1,0 +1,36 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <RelativeLayout
+        android:layout_width="66dp"
+        android:layout_height="78dp">
+
+        <View
+            android:id="@+id/v_topLine"
+            android:layout_width="1dp"
+            android:layout_height="16dp"
+            android:layout_marginLeft="33dp"
+            android:background="#b2b2b2" />
+
+        <TextView
+            android:id="@+id/tv_dayLabel"
+            android:layout_width="46dp"
+            android:layout_height="46dp"
+            android:layout_centerInParent="true"
+            android:background="@drawable/horizontal_bg"
+            android:gravity="center"
+            android:text="21"
+            android:textColor="#26bfa6"
+            android:textSize="27sp" />
+
+        <View
+            android:id="@+id/v_bottomLine"
+            android:layout_width="1dp"
+            android:layout_height="16dp"
+            android:layout_alignParentBottom="true"
+            android:layout_marginLeft="33dp"
+            android:background="#b2b2b2" />
+    </RelativeLayout>
+
+</RelativeLayout>

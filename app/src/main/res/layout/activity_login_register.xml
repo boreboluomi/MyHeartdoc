@@ -1,0 +1,154 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@mipmap/bg_login">
+
+    <LinearLayout
+        android:id="@+id/ll_loginregister_username"
+        android:layout_width="match_parent"
+        android:layout_height="56dp"
+        android:layout_alignParentTop="true"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="168dp"
+        android:gravity="center_vertical"
+        android:orientation="vertical">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="55dp"
+            android:gravity="center_vertical"
+            android:orientation="horizontal">
+
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="28dp"
+                android:src="@mipmap/login_accounts" />
+
+            <EditText
+                android:id="@+id/loginregisterui_username"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_marginLeft="6dp"
+                android:layout_weight="1"
+                android:background="@android:color/transparent"
+                android:gravity="center_vertical"
+                android:hint="手机号码"
+                android:inputType="phone|textEmailAddress"
+                android:textColor="#b2b2b2"
+                android:textSize="18sp">
+
+                <requestFocus />
+            </EditText>
+        </LinearLayout>
+
+        <View
+            android:layout_width="304dp"
+            android:layout_height="1dp"
+            android:layout_gravity="center_horizontal"
+            android:background="#ffffff" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/ll_loginregister_password"
+        android:layout_width="match_parent"
+        android:layout_height="56dp"
+        android:layout_below="@+id/ll_loginregister_username"
+        android:gravity="center_vertical"
+        android:orientation="vertical">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="55dp"
+            android:gravity="center_vertical"
+            android:orientation="horizontal">
+
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="28dp"
+                android:src="@mipmap/login_password" />
+
+            <EditText
+                android:id="@+id/loginregister_pwd"
+                android:layout_width="0dp"
+                android:layout_height="55dp"
+                android:layout_marginLeft="6dp"
+                android:layout_weight="1"
+                android:background="@android:color/transparent"
+                android:gravity="center_vertical"
+                android:hint="密码"
+                android:inputType="textPassword"
+                android:textColor="#b2b2b2"
+                android:textSize="18sp"></EditText>
+
+           <!-- <ImageView
+                android:id="@+id/loginregisterui_eye"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginRight="28dp"
+
+                android:src="@mipmap/login_show" />-->
+            <CheckBox
+                android:id="@+id/loginregisterui_eye"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginRight="40dp"
+                android:background="@drawable/password"
+                android:button="@null"
+                />
+        </LinearLayout>
+
+        <View
+            android:layout_width="304dp"
+            android:layout_height="1dp"
+            android:layout_gravity="center_horizontal"
+            android:background="#ffffff" />
+    </LinearLayout>
+
+    <Button
+        android:id="@+id/btn_login"
+        android:layout_width="304dp"
+        android:layout_height="50dp"
+        android:layout_below="@+id/ll_loginregister_password"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="70dp"
+        android:background="@drawable/login_btn_bg"
+        android:gravity="center"
+        android:text="登录"
+        android:textColor="@android:color/white"
+        android:textSize="20sp" />
+
+    <TextView
+        android:id="@+id/loginregusterui_forgetpwd"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentRight="true"
+        android:layout_below="@+id/ll_loginregister_password"
+        android:layout_marginRight="15dp"
+        android:layout_marginTop="20dp"
+        android:text="找回密码"
+        android:textColor="#ffffff"
+        android:textSize="16sp" />
+
+    <ImageView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="50dp"
+        android:background="@mipmap/login_icon" />
+
+    <TextView
+        android:id="@+id/tv_quickregister"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_centerHorizontal="true"
+        android:layout_marginBottom="40dp"
+        android:onClick="register"
+        android:text="马上注册"
+        android:textColor="#ff9c00"
+        android:textSize="18sp" />
+
+</RelativeLayout>

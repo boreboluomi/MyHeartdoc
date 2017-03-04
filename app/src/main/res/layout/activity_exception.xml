@@ -1,0 +1,117 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:hint="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <RelativeLayout
+        android:id="@+id/exce_title"
+        android:layout_width="match_parent"
+        android:layout_height="45dp">
+
+        <ImageView
+            android:id="@+id/exce_back"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:paddingLeft="10dp"
+            android:paddingRight="5dp"
+            android:src="@mipmap/ic_back" />
+
+        <RelativeLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_toRightOf="@id/exce_back">
+
+            <TextView
+                android:id="@+id/exce_timeSpace"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="18:20:32~20:19:11"
+                android:textColor="#26bfa6"
+                android:textSize="16sp" />
+
+            <TextView
+                android:id="@+id/exce_timeLength"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/exce_timeSpace"
+                android:text="时长 01:59:21"
+                android:textColor="#26bfa6"
+                android:textSize="16sp" />
+        </RelativeLayout>
+
+        <TextView
+            android:id="@+id/exce_unusalList"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_alignParentRight="true"
+            android:layout_marginRight="10dp"
+            android:gravity="bottom"
+            android:text="疑似症状 窦性心动过速"
+            android:textColor="#666666"
+            android:textSize="14sp" />
+
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:id="@+id/exce_ecgbackground"
+        android:layout_width="match_parent"
+        android:layout_height="200dp"
+        android:layout_below="@+id/exce_title">
+
+        <com.electrocardio.custom.elec.ScrollHorizontalView
+            android:id="@+id/root"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_vertical">
+            <!--   android:scrollbarTrackHorizontal="@drawable/scrollbar_vertical_track"
+            android:scrollbarThumbHorizontal="@drawable/scrollbar_vertical_thumb"-->
+            <LinearLayout
+                android:id="@+id/id_gallery"
+                android:layout_width="30dp"
+                android:layout_height="240dp"
+                android:orientation="horizontal"></LinearLayout>
+        </com.electrocardio.custom.elec.ScrollHorizontalView>
+    </RelativeLayout>
+
+    <com.electrocardio.custom.elec.SeekBarHint
+        android:id="@+id/exce_seekbar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/exce_ecgbackground"
+        android:layout_marginTop="40dp"
+        android:max="12100"
+        hint:popupStyle="follow"
+        hint:popupWidth="100dp"
+        hint:yOffset="-260dp" />
+
+    <RelativeLayout
+        android:id="@+id/exception_loading"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/popup_bg"
+        android:gravity="center"
+        android:visibility="gone">
+
+        <LinearLayout
+            android:layout_width="100dp"
+            android:layout_height="100dp"
+            android:gravity="center"
+            android:orientation="vertical">
+
+            <ProgressBar
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="加载中…"
+                android:textColor="#888888"
+                android:textSize="11sp" />
+        </LinearLayout>
+
+    </RelativeLayout>
+
+</RelativeLayout>

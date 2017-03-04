@@ -1,0 +1,137 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:slideswitch="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#ebebf0">
+
+    <include
+        android:id="@+id/title"
+        layout="@layout/fragment_title" />
+
+    <FrameLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@id/title">
+
+        <RelativeLayout
+            android:id="@+id/rl_debug"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:visibility="visible">
+
+            <TextView
+                android:id="@+id/label"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="25dp"
+                android:layout_marginTop="50dp"
+                android:text="请输入厂家调试密码"
+                android:textColor="#333333"
+                android:textSize="18sp" />
+
+            <EditText
+                android:id="@+id/et_password"
+                android:layout_width="match_parent"
+                android:layout_height="50dp"
+                android:layout_below="@id/label"
+                android:layout_marginLeft="25dp"
+                android:layout_marginRight="25dp"
+                android:layout_marginTop="5dp"
+                android:background="@drawable/textfield"
+                android:inputType="numberPassword"
+                android:paddingLeft="5dp"
+                android:paddingRight="5dp" />
+
+            <Button
+                android:id="@+id/confirm"
+                android:layout_width="320dp"
+                android:layout_height="50dp"
+                android:layout_below="@id/et_password"
+                android:layout_centerHorizontal="true"
+                android:layout_marginTop="60dp"
+                android:background="@drawable/btn_all_bg"
+                android:text="验证"
+                android:textColor="#ffffff"
+                android:textSize="18sp" />
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:id="@+id/rl_content"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
+            android:background="#ffffff"
+            android:visibility="invisible">
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="2px"
+                android:background="@color/registerpage_divider" />
+
+            <RelativeLayout
+                android:id="@+id/rl_1mv"
+                android:layout_width="match_parent"
+                android:layout_height="56dp">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:layout_marginLeft="10dp"
+                    android:text="1mV校准"
+                    android:textColor="#333333"
+                    android:textSize="18sp" />
+
+                <com.electrocardio.custom.elec.SwitchButtonView
+                    android:id="@+id/mVButton"
+                    android:layout_width="56dp"
+                    android:layout_height="26dp"
+                    android:layout_alignParentRight="true"
+                    android:layout_centerVertical="true"
+                    android:layout_marginRight="10dp"
+                    slideswitch:slideButtonBackground="@mipmap/switch_point"
+                    slideswitch:switchState="false" />
+
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="2px"
+                    android:layout_alignParentBottom="true"
+                    android:layout_marginLeft="10dp"
+                    android:layout_marginRight="10dp"
+                    android:background="@color/registerpage_divider" />
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="56dp"
+                android:layout_below="@id/rl_1mv">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:layout_marginLeft="10dp"
+                    android:text="丢包统计"
+                    android:textColor="#333333"
+                    android:textSize="18sp" />
+
+                <com.electrocardio.custom.elec.SwitchButtonView
+                    android:id="@+id/statistical"
+                    android:layout_width="56dp"
+                    android:layout_height="26dp"
+                    android:layout_alignParentRight="true"
+                    android:layout_centerVertical="true"
+                    android:layout_marginRight="10dp"
+                    slideswitch:slideButtonBackground="@mipmap/switch_point"
+                    slideswitch:switchState="false" />
+
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="2px"
+                    android:layout_alignParentBottom="true"
+                    android:background="@color/registerpage_divider" />
+            </RelativeLayout>
+        </RelativeLayout>
+    </FrameLayout>
+</RelativeLayout>

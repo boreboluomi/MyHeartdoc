@@ -1,0 +1,90 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <FrameLayout
+        android:layout_width="228dp"
+        android:layout_height="52dp"
+        android:background="@drawable/gain_bg">
+
+        <RadioGroup
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="horizontal">
+
+            <RadioButton
+                android:id="@+id/rb_first"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_vertical"
+                android:layout_weight="1"
+                android:button="@null"
+                android:checked="false"
+                android:gravity="center_horizontal"
+                android:text="x0.25"
+                android:textColor="@drawable/gain_text_bg"
+                android:textSize="16sp" />
+
+            <View
+                android:layout_width="2px"
+                android:layout_height="34dp"
+                android:layout_gravity="center_vertical"
+                android:background="#4c4c4c" />
+
+            <RadioButton
+                android:id="@+id/rb_second"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_vertical"
+                android:layout_weight="1"
+                android:button="@null"
+                android:checked="false"
+                android:gravity="center_horizontal"
+                android:text="x0.5"
+                android:textColor="@drawable/gain_text_bg"
+                android:textSize="16sp" />
+
+            <View
+                android:layout_width="2px"
+                android:layout_height="34dp"
+                android:layout_gravity="center_vertical"
+                android:background="#4c4c4c" />
+
+            <RadioButton
+                android:id="@+id/rb_third"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_vertical"
+                android:layout_weight="1"
+                android:button="@null"
+                android:checked="true"
+                android:gravity="center_horizontal"
+                android:text="x1.0"
+                android:textColor="@drawable/gain_text_bg"
+                android:textSize="16sp" />
+
+            <View
+                android:layout_width="2px"
+                android:layout_height="34dp"
+                android:layout_gravity="center_vertical"
+                android:background="#4c4c4c" />
+
+            <RadioButton
+                android:id="@+id/rb_forth"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_vertical"
+                android:layout_weight="1"
+                android:button="@null"
+                android:checked="false"
+                android:gravity="center_horizontal"
+                android:text="x2.0"
+                android:textColor="@drawable/gain_text_bg"
+                android:textSize="16sp" />
+
+        </RadioGroup>
+
+    </FrameLayout>
+
+</FrameLayout>

@@ -1,0 +1,196 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#ebebf0">
+
+    <include
+        android:id="@+id/in_title"
+        layout="@layout/fragment_title" />
+
+    <RelativeLayout
+        android:id="@+id/rl_center"
+        android:layout_width="match_parent"
+        android:layout_height="313dp"
+        android:layout_below="@id/in_title"
+        android:background="#f98c11">
+
+        <FrameLayout
+            android:id="@+id/fl_top"
+            android:layout_width="match_parent"
+            android:layout_height="22dp"
+            android:visibility="invisible">
+
+            <ProgressBar
+                android:id="@+id/pb_data"
+                style="@android:style/Widget.ProgressBar.Horizontal"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:progress="40"
+                android:progressDrawable="@drawable/cleardata_pb_bg" />
+
+            <TextView
+                android:id="@+id/tv_dataContent"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:background="@android:color/transparent"
+                android:gravity="center"
+                android:text="已占用235.3M,剩余395.8M可用"
+                android:textColor="#ffffff"
+                android:textSize="13sp" />
+        </FrameLayout>
+
+        <FrameLayout
+            android:id="@+id/fl_middle"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/fl_top"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="22dp">
+
+            <ImageView
+                android:id="@+id/iv_broom_bg_default"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:src="@mipmap/ic_broom_bg_default" />
+
+            <ImageView
+                android:id="@+id/iv_broom"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:src="@mipmap/ic_broom" />
+
+            <ImageView
+                android:id="@+id/iv_broom_bg_rotation"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:src="@mipmap/ic_broom_bg_rotation"
+                android:visibility="invisible" />
+
+        </FrameLayout>
+
+        <TextView
+            android:id="@+id/tv_clearState"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/fl_middle"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="16dp"
+            android:text="59个清理项,共880M"
+            android:textColor="#ffffff"
+            android:textSize="31sp" />
+
+        <TextView
+            android:id="@+id/tv_clearTip"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/tv_clearState"
+            android:layout_centerHorizontal="true"
+            android:text="仅保留本月未上传的异常数据"
+            android:textColor="#9c4a00"
+            android:textSize="13sp" />
+
+        <Button
+            android:id="@+id/btn_clear"
+            android:layout_width="180dp"
+            android:layout_height="42dp"
+            android:layout_below="@id/tv_clearTip"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="33dp"
+            android:background="@drawable/btn_clear_bg"
+            android:editable="true"
+            android:text="一键清理"
+            android:textColor="@drawable/btn_clear_textcolor"
+            android:textSize="18sp" />
+
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:id="@+id/rl_handClear"
+        android:layout_width="match_parent"
+        android:layout_height="60dp"
+        android:layout_below="@id/rl_center"
+        android:layout_marginTop="10dp"
+        android:background="#ffffff">
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="2px"
+            android:layout_alignParentTop="true"
+            android:background="@color/registerpage_divider" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="14dp"
+            android:text="手动清理"
+            android:textColor="#333333"
+            android:textSize="18sp" />
+
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            android:layout_marginRight="14dp"
+            android:src="@mipmap/ic_next_level" />
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="2px"
+            android:layout_alignParentBottom="true"
+            android:background="@color/registerpage_divider" />
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:background="#ffffff">
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="2px"
+            android:background="@color/registerpage_divider" />
+
+        <RelativeLayout
+            android:id="@+id/rl_warn"
+            android:layout_width="match_parent"
+            android:layout_height="33dp">
+
+            <ImageView
+                android:id="@+id/iv_warn"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:layout_marginLeft="10dp"
+                android:src="@mipmap/ic_warn" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:layout_marginLeft="5dp"
+                android:layout_toRightOf="@id/iv_warn"
+                android:text="提示"
+                android:textColor="#333333"
+                android:textSize="18sp" />
+        </RelativeLayout>
+
+        <TextView
+            android:id="@+id/tv_secondWarn"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/rl_warn"
+            android:layout_marginBottom="10dp"
+            android:layout_marginLeft="10dp"
+            android:layout_marginRight="10dp"
+            android:layout_marginTop="9dp"
+            android:text="清理数据后的检测报告将不再显示心电波形，其他报告内容仍将为您保留。"
+            android:textColor="#808080"
+            android:textSize="13sp" />
+    </RelativeLayout>
+
+</RelativeLayout>

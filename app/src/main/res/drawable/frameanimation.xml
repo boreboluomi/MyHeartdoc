@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="utf-8"?>
+<animation-list xmlns:android="http://schemas.android.com/apk/res/android">
+    <item
+        android:drawable="@mipmap/spread0001"
+        android:duration="150" />
+    <item
+        android:drawable="@mipmap/spread0002"
+        android:duration="150" />
+    <item
+        android:drawable="@mipmap/spread0003"
+        android:duration="150" />
+    <item
+        android:drawable="@mipmap/spread0004"
+        android:duration="150" />
+    <item
+        android:drawable="@mipmap/spread0005"
+        android:duration="150" />
+</animation-list>

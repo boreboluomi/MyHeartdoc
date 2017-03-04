@@ -1,0 +1,22 @@
+<resources>
+    <string name="app_name">心电</string>
+
+    <string name="hello_world">Hello world!</string>
+    <string name="action_settings">Settings</string>
+    <string name="userhead">用户头像</string>
+    <string name="aboutusdescription">"\u3000\u3000"可穿戴健康设备是随着可穿戴设备的产生发展而逐渐衍生出来的可穿戴设备的又一分支。通过“内在连通性”实现快捷的数据获取、通过超快的分享内容能力高效地保持社交联系。摆脱传统的手持设备而获得无缝的网络访问体验。</string>
+    <string name="folder_name">文件名</string>
+    <string name="image_num">图片数量</string>
+    <string name="all_folder">所有图片</string>
+    <string name="sheet">张</string>
+    <string name="shoot">拍摄照片</string>
+    <string name="picture">图片</string>
+    <string name="finish">取消</string>
+    <string name="temp_date">2015年12月2日</string>
+    <string name="msg_no_camera">没有系统相机</string>
+    <string name="msg_amount_limit">已经达到最高选择数量</string>
+
+    <string name="open_camera_fail">相册初始化失败!</string>
+    <string name="empty_sdcard">没有SD卡</string>
+
+</resources>

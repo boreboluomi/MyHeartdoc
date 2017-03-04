@@ -1,0 +1,156 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="60dp"
+        android:background="#ffffff">
+
+        <View
+            android:id="@+id/v_topLine"
+            android:layout_width="match_parent"
+            android:layout_height="2px"
+            android:background="#b2b2b2" />
+
+        <TextView
+            android:id="@+id/m_dayOfMonth"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="14dp"
+            android:text="22"
+            android:textColor="#26bfa6"
+            android:textSize="27sp" />
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_toRightOf="@id/m_dayOfMonth"
+            android:orientation="vertical">
+
+            <RelativeLayout
+                android:layout_width="wrap_content"
+                android:layout_height="0dp"
+                android:layout_weight="1">
+
+                <TextView
+                    android:id="@+id/tv_dayLabel"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentBottom="true"
+                    android:text="日 "
+                    android:textColor="#26bfa6"
+                    android:textSize="14sp" />
+
+                <TextView
+                    android:id="@+id/tv_timeSpace"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentBottom="true"
+                    android:layout_toRightOf="@id/tv_dayLabel"
+                    android:text="18:20:32~03月01日 10:57:09"
+                    android:textColor="#26bfa6"
+                    android:textSize="14sp" />
+            </RelativeLayout>
+
+            <FrameLayout
+                android:layout_width="wrap_content"
+                android:layout_height="0dp"
+                android:layout_weight="1">
+
+                <RelativeLayout
+                    android:id="@+id/rl_timeAndSize"
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:visibility="gone">
+
+                    <TextView
+                        android:id="@+id/tv_timeLabel"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_centerVertical="true"
+                        android:text="时长 "
+                        android:textColor="#808080"
+                        android:textSize="14sp" />
+
+                    <TextView
+                        android:id="@+id/tv_timeLength"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_centerVertical="true"
+                        android:layout_toRightOf="@id/tv_timeLabel"
+                        android:text="38:42:19"
+                        android:textColor="#808080"
+                        android:textSize="14sp" />
+
+                    <TextView
+                        android:id="@+id/tv_sizeLabel"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_centerVertical="true"
+                        android:layout_toRightOf="@id/tv_timeLength"
+                        android:text="   大小 "
+                        android:textColor="#808080"
+                        android:textSize="14sp" />
+
+                    <TextView
+                        android:id="@+id/tv_size"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_centerVertical="true"
+                        android:layout_toRightOf="@id/tv_sizeLabel"
+                        android:text="2.2M"
+                        android:textColor="#808080"
+                        android:textSize="14sp" />
+                </RelativeLayout>
+
+                <RelativeLayout
+                    android:id="@+id/rl_uploadProgress"
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent">
+
+                    <ProgressBar
+                        android:id="@+id/pb_uploadProgress"
+                        style="@android:style/Widget.ProgressBar.Horizontal"
+                        android:layout_width="160dp"
+                        android:layout_height="4dp"
+                        android:layout_centerVertical="true"
+                        android:progress="0"
+                        android:progressDrawable="@drawable/uploaddata_progress" />
+
+                    <TextView
+                        android:id="@+id/tv_uploadDataState"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_centerVertical="true"
+                        android:layout_marginLeft="5dp"
+                        android:layout_toRightOf="@id/pb_uploadProgress"
+                        android:text="0"
+                        android:textColor="#666666"
+                        android:textSize="14sp" />
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_centerVertical="true"
+                        android:layout_marginLeft="2dp"
+                        android:layout_toRightOf="@id/tv_uploadDataState"
+                        android:text="%"
+                        android:textColor="#666666"
+                        android:textSize="14sp" />
+
+                </RelativeLayout>
+            </FrameLayout>
+        </LinearLayout>
+
+        <Button
+            android:id="@+id/button_upload"
+            android:layout_width="90dp"
+            android:layout_height="60dp"
+            android:text="上传"
+            android:layout_alignParentRight="true"
+            android:textColor="#26bfa6"
+            />
+
+    </RelativeLayout>
+</FrameLayout>
